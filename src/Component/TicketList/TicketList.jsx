@@ -28,11 +28,11 @@ const TicketList = ({ ticket, handleProcess,disabled }) => {
                     <div className="footer flex justify-between items-center ">
                         <div className="flex gap-4 items-center pt-1">
                             <span className='pt-1'>#00{ticket.id}</span>
-                            <span className='text-red-500 text-2xl' >{ticket.priority}</span>
+                            <span className='text-red-500 text-xl' >{ticket.priority}</span>
                         </div>
-                        <div className="flex pt-2">
+                        <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2  pt-2 ">
                             <p>{ticket.customer}</p>
-                            <span> 📅 {ticket.createdAt}</span>
+                            <span className='text-[12px]' > 📅 {ticket.createdAt}</span>
                         </div>
 
                     </div>

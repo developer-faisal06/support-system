@@ -14,8 +14,7 @@ const Navigation = () => {
                             className="menu  menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                              <li><a className='text-black'>Home</a></li>
                             <li><a className='text-black'>FAQ</a></li>
-                            <li><a className='text-black'>Blog</a></li>
-                            <li><a className='text-black'>Download</a></li>
+                            <li><a className='text-black'>Blog</a></li>                           
                             <li><a className='text-black'>Contact</a></li>
                         </ul>
                     </div>
@@ -28,7 +27,6 @@ const Navigation = () => {
                             <li ><a href='#'  className='  text-black font-bold focus:bg-blue-200'>Home</a></li>
                             <li><a href='#' className='text-black font-bold focus:bg-blue-200'>FAQ</a></li>
                             <li><a href='#' className='text-black font-bold focus:bg-blue-200'>Blog</a></li>
-                            <li><a href='#' className='text-black font-bold focus:bg-blue-200'>Download</a></li>
                             <li><a href='#' className='text-black font-bold focus:bg-blue-200'>Contact</a></li>
                         </ul>
                     </div>

@@ -4,8 +4,8 @@ import React from 'react';
 const StatusCard = ({progress,resolve}) => {
     return (
         <div className="bg-gray-200">
-            <div className='container mx-auto flex justify-center gap-10 py-20'>
-                <div className="status-card relative h-[200px] w-[50%]  shadow-sm flex justify-center items-center ">
+            <div className='container mx-auto grid grid-cols md:grid-cols-2 gap-4 p-4 lg:py-10 lg:gap-10'>
+                <div className="status-card relative h-[200px] shadow-sm flex justify-center items-center ">
                     
                     <div className="content flex flex-col  ">
                         <h2 className="text-2xl font-bold ">In-Progress </h2>
@@ -13,7 +13,7 @@ const StatusCard = ({progress,resolve}) => {
                     </div>
 
                 </div>
-                <div className="status-card relative h-[200px] w-[50%]  shadow-sm flex justify-center items-center">
+                <div className="status-card relative h-[200px]  shadow-sm flex justify-center items-center">
                     <div className="content flex flex-col  ">
                         <h2 className="text-2xl font-bold ">Resolved</h2>
                         <span className='text-4xl font-bold mx-auto py-2'>{resolve.length}</span>
