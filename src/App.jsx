@@ -1,10 +1,10 @@
-import { Suspense, useEffect, useState } from 'react'
-import './App.css'
-import Navigation from './Component/Navigation/Navigation'
-import StatusCard from './Component/StatusCard/StatusCard'
-import TicketManagment from './Component/TicketManagment/TicketManagment'
-import Footer from './Component/Footer/Footer'
-import { toast, ToastContainer } from 'react-toastify'
+import { Suspense, useEffect, useState } from 'react';
+import './App.css';
+import Navigation from './Component/Navigation/Navigation';
+import StatusCard from './Component/StatusCard/StatusCard';
+import TicketManagment from './Component/TicketManagment/TicketManagment';
+import Footer from './Component/Footer/Footer';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ticketPromices = async () => {
   const res = await fetch('/tickets.json')
@@ -34,13 +34,11 @@ function App() {
     setProgress(newProgress);
     setDisabled([...disabled, ticket.id]);
     toast("Task In-Progress");
-
   }
 
   const handeleComplete = async (item) => {
     const progressItem = [...resolve, item];
     setResolve(progressItem);
-
     const updatedProgress = progress.filter(p => p.id !== item.id);
     setProgress(updatedProgress);
     setData(prev => prev.filter(d => d.id !== item.id));
@@ -68,9 +66,7 @@ function App() {
       </Suspense>
 
       <Footer></Footer>
-
       <ToastContainer />
-
     </>
   )
 }

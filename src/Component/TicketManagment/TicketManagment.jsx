@@ -5,13 +5,12 @@ import TicketResult from '../TicketResult/TicketResult';
 const TicketManagment = ({disabled, data, handleProcess, progress , handeleComplete,resolve, }) => {
     
     // const ticketData = use(ticketsPromise);
-     
-   
+        
     return (
-        <div className='bg-gray-200' >            
-            <div className="grid grid-cols md:grid-cols-3  container mx-auto">
+        <div className='bg-gray-200 pb-10' >            
+            <div className="grid grid-cols md:grid-cols-3 container mx-auto">
                 <div className='col-span md:col-span-2 p-4'>
-                    <h1 className=' container mx-auto text-2xl pb-4 font-bold text-black' >Customer Tickets </h1>
+                    <h1 className='container mx-auto text-2xl pb-4 font-bold text-black' >Customer Tickets </h1>
                     <div className="card-list grid grid-cols sm:grid-cols md:grid-cols lg:grid-cols-2 gap-5">
                         {
                         data.map(ticket => <TicketList 

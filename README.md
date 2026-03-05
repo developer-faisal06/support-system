@@ -1,16 +1,15 @@
-# React + Vite
+## 1. Answer :
+--JSX হচ্ছে JavaScript XML, React এ HTML এর মতো দেখতে কোড লিখার সহজ উপাই, এটা জাভাস্ক্রিপ্ট এর ভিতর লিখা যায় । 
+JSX ব্যবহার করার কারণ হলো: ইউআই লিখা অনেক সহজ এবং পড়তে সহজ হয় এবং জাভাস্ক্রিপ্ট লজিক আর এইচটিএমএল একসাথে লিখা যায়। 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 2. Answer :
+React এ ডাটা ধরে  রাখার জন্য state এবং props ব্যবহার করা হয়, কিন্তু এদের কাজ ও নিয়ন্ত্রন সম্পুর্ন আলাদা। ‍state হচ্ছে একটি কম্পনেন্টএর অভ্যান্তরিন ডাটা যা সেই কম্পনেন্ট নিজেই পরিবর্তন করতে পারে । অপরদিকে props হলো প্যারেন্ট কম্পনেন্ট থেকে চাইল্ড কম্পনেন্ট এ পাঠানো ডাটা এবং এটা চাইল্ড কম্পনেন্ট শুধু পড়তে পারে। 
 
-Currently, two official plugins are available:
+## 3. Answer : 
+useState হলো React-এর একটি অন্যতম গুরুত্বপূর্ণ এবং বহুল ব্যবহৃত Hook, যা মূলত কোনো Functional Component-এর ভেতরে ডেটা বা স্টেট (State) সংরক্ষণ এবং পরিচালনা করতে ব্যবহৃত হয়। সাধারণ জাভাস্ক্রিপ্ট ভেরিয়েবল ব্যবহার করলে তার মান পরিবর্তন হলেও ব্রাউজারে UI স্বয়ংক্রিয়ভাবে আপডেট হয় না, কিন্তু useState ব্যবহার করলে যখনই স্টেটের মান পরিবর্তন করা হয়, React সাথে সাথে সেই কম্পোনেন্টটিকে পুনরায় রেন্ডার (Re-render) করে এবং নতুন মানটি স্ক্রিনে প্রদর্শন করে।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 4. Answer : 
+React-এ এক কম্পোনেন্টের স্টেট অন্য কম্পোনেন্টের সাথে শেয়ার করার জন্য কয়েকটা উপায় আছে। সবচেয়ে সাধারণ উপায় হলো Lifting State Up অর্থাৎ স্টেটটা দুই কম্পোনেন্টের কাছাকাছি কোনো কমন প্যারেন্ট কম্পোনেন্টে রাখা এবং props দিয়ে দরকারি চাইল্ডদের কাছে পাঠানো।
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 5 . Answer :  
+React-এ Event Handling হলো এমন একটি প্রক্রিয়া যার মাধ্যমে ব্যবহারকারীর বিভিন্ন অ্যাকশন (যেমন: ক্লিক করা, টাইপ করা বা মাউস সরানো) শনাক্ত করে নির্দিষ্ট কোনো কাজ সম্পন্ন করা হয়। এটি অনেকটা সাধারণ HTML-এর ইভেন্ট হ্যান্ডলিংয়ের মতো হলেও এখানে নামকরণের ক্ষেত্রে camelCase (যেমন: onClick, onChange) ব্যবহার করতে হয় এবং ইভেন্ট হ্যান্ডলার হিসেবে সরাসরি একটি ফাংশন বা ফাংশনের নাম কার্লি ব্রেস { }-এর মধ্যে পাঠাতে হয়। React মূলত Synthetic Events নামক একটি সিস্টেম ব্যবহার করে, যা নিশ্চিত করে যে আপনার কোডটি সব ধরনের ব্রাউজারে একইভাবে কাজ করবে। 
