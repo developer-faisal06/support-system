@@ -20,7 +20,7 @@ const TicketList = ({ ticket, handleProcess,disabled }) => {
 
                     <div className="flex justify-between">
                         <h2 className='text-bold font-bold text-2xl' >{ticket.title}</h2>
-                        <div className="badge badge-primary rounded pt-0.5 pb-1">
+                        <div className={`badge rounded pt-0.5 font-white pb-1 ${disabled ? "badge-secondary":"bg-[#632EE3]"}`}>
                             {disabled ? "Progress":"Open"}</div>
                     </div>
                     <p className='py-4' > {ticket.description} </p>
