@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.status-card{
+    background-image: url(./assets/vector1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
