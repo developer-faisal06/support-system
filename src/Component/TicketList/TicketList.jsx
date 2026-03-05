@@ -15,7 +15,7 @@ const TicketList = ({ ticket, handleProcess,disabled }) => {
 // }
     return (        
                 <div onClick={()=>!disabled && handleProcess(ticket)} 
-                                className={`cursor-pointer bg-gray-300 p-4 text-black rounded-md shadow-md 
+                                className={`cursor-pointer bg-slate-100 p-4 text-black rounded-md shadow-md 
       ${disabled ? "pointer-events-none opacity-60" : ""}`}>
 
                     <div className="flex justify-between">
@@ -28,7 +28,7 @@ const TicketList = ({ ticket, handleProcess,disabled }) => {
                     <div className="footer flex justify-between items-center ">
                         <div className="flex gap-4 items-center pt-1">
                             <span className='pt-1'>#00{ticket.id}</span>
-                            <span className='text-red-500 text-xl' >{ticket.priority}</span>
+                            <span className={`text-xl font-bold ${ticket.priority === "High"?"text-red-500": ticket.priority === "Medium" ? "text-yellow-500": "text-green-500"} `} >{ticket.priority}</span>
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2  pt-2 ">
                             <p>{ticket.customer}</p>

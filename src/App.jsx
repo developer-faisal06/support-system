@@ -44,12 +44,8 @@ function App() {
     const updatedProgress = progress.filter(p => p.id !== item.id);
     setProgress(updatedProgress);
     setData(prev => prev.filter(d => d.id !== item.id));
-
     toast.success("Task Resolved");
-
   }
-
-
   return (
     <>
 
