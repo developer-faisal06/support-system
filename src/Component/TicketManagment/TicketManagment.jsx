@@ -1,13 +1,10 @@
-// import React, { use } from 'react';
 import TicketList from '../TicketList/TicketList';
 import TicketResult from '../TicketResult/TicketResult';
 
-const TicketManagment = ({disabled, data, handleProcess, progress , handeleComplete,resolve, }) => {
+const TicketManagment = ({disabled, data, handleProcess, progress , handeleComplete,resolve }) => {
     
-    // const ticketData = use(ticketsPromise);
-        
     return (
-        <div className='bg-gray-200 pb-10' >            
+        <div className='bg-gray-200 pb-10' >                       
             <div className="grid grid-cols md:grid-cols-3 container mx-auto">
                 <div className='col-span md:col-span-2 p-4'>
                     <h1 className='container mx-auto text-2xl pb-4 font-bold text-black' >Customer Tickets </h1>
@@ -18,11 +15,12 @@ const TicketManagment = ({disabled, data, handleProcess, progress , handeleCompl
                             key={ticket.id} 
                             handleProcess={handleProcess}   
                             ticket={ticket}  
+                            
                             ></TicketList>)
                         }
                     </div>
                 </div>
-                <TicketResult progress={progress} handeleComplete={handeleComplete} key={progress.id} resolve={resolve} ></TicketResult>
+                <TicketResult progress={progress}  handeleComplete={handeleComplete} key={progress.id} resolve={resolve} ></TicketResult>
             </div>
 
         </div>
